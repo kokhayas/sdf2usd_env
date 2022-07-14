@@ -45,11 +45,10 @@ RUN make install
 
 RUN sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
 RUN wget http://packages.osrfoundation.org/gazebo.key -O - | apt-key add -
-
 RUN apt-get update -y
 RUN apt-get install -y libignition-fuel-tools7
 RUN apt-get install -y libignition-fuel-tools-dev
-
+RUN ign
 RUN ign fuel download --url  "https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Panda with Ignition position controller model"
 
 RUN echo 'alias sdf2usd="/root/sdf_source/sdformat/build/bin/sdf2usd"' >> ~/.bashrc
