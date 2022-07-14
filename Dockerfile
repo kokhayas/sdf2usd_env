@@ -52,6 +52,5 @@ RUN apt-get install -y libignition-fuel-tools7-dev
 RUN ign fuel download --url  "https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Panda with Ignition position controller model"
 
 RUN echo 'alias sdf2usd="/root/sdf_source/sdformat/build/bin/sdf2usd"' >> ~/.bashrc
-RUN source ~/.barhc
 
 WORKDIR /root
