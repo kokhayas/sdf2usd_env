@@ -25,16 +25,16 @@ RUN export CMAKE_PREFIX_PATH=/root:$CMAKE_PREFIX_PATH
 # RUN mkdir ~/sdf_source
 # RUN cd ~/sdf_source/
 
-WORKDIR /home/sdf_source/
+WORKDIR /root/sdf_source/
 RUN git clone https://github.com/ignitionrobotics/sdformat
 # RUN cd sdformat
 
-WORKDIR /home/sdf_source/sdformat
+WORKDIR /root/sdf_source/sdformat
 RUN apt -y install $(sort -u $(find . -iname 'packages-'`lsb_release -cs`'.apt' -o -iname 'packages.apt' | grep -v '/\.git/') | tr '\n' ' ') -y
 # RUN mkdir build
 # RUN cd build
 
-WORKDIR /home/sdf_source/sdformat/build
+WORKDIR /root/sdf_source/sdformat/build
 # RUN pwd
 # RUN ls
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=/usr
