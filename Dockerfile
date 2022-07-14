@@ -19,9 +19,9 @@ RUN git clone --depth 1 -b v21.11 https://github.com/PixarAnimationStudios/USD.g
 RUN apt install -y libpyside2-dev python3-opengl cmake libglu1-mesa-dev freeglut3-dev mesa-common-dev 
 
 RUN cd /USD && python3 build_scripts/build_usd.py --build-variant release --no-tests --no-examples --no-tutorials --no-docs --no-python /root
-RUN export PATH=/root/bin:$PATH
-RUN export LD_LIBRARY_PATH=/root/lib:$LD_LIBRARY_PATH
-RUN export CMAKE_PREFIX_PATH=/root:$CMAKE_PREFIX_PATH
+ENV PATH /root/bin:$PATH
+ENV LD_LIBRARY_PATH /root/lib:$LD_LIBRARY_PATH
+ENV CMAKE_PREFIX_PATH /root:$CMAKE_PREFIX_PATH
 # RUN mkdir ~/sdf_source
 # RUN cd ~/sdf_source/
 
