@@ -43,6 +43,8 @@ RUN make -j4
 # otherwise you may need to use ` make install`
 RUN make install
 
+RUN ign fuel download --url  "https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Panda with Ignition position controller model"
+
 
 
 WORKDIR /root
