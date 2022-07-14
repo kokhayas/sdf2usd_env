@@ -37,7 +37,7 @@ RUN apt -y install $(sort -u $(find . -iname 'packages-'`lsb_release -cs`'.apt' 
 WORKDIR /root/sdf_source/sdformat/build
 # RUN pwd
 # RUN ls
-RUN cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+RUN cmake ../ -DCMAKE_INSTALL_PREFIX=/usr
 RUN make -j4
 # make install will work as the root user in a docker container
 # otherwise you may need to use ` make install`
