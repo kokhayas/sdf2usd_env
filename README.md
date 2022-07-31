@@ -7,3 +7,5 @@ docker-compose up -d
 docker exec -it kokhayas_container bash
 
 sdf2usd directory/input.sdf directory/output.usda
+
+git clone hsr
