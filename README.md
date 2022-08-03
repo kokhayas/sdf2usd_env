@@ -9,3 +9,4 @@ docker exec -it kokhayas_container bash
 コマンド実行例 sdf2usd directory/input.sdf directory/output.usda
 
 Isaac Simでusdaをopenした時にtextureへのreferenceがdefaultでmaterials/textures/~.pngになっている場合があるので、 適切な参照(例 meshes/~.png)に直す必要があります
+松尾研のrobot_dev2ではこのdockerは正常に動きます
