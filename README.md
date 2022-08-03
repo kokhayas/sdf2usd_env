@@ -6,6 +6,6 @@ docker-compose build
 docker-compose up -d
 docker exec -it kokhayas_container bash
 
-sdf2usd directory/input.sdf directory/output.usda
+コマンド実行例 sdf2usd directory/input.sdf directory/output.usda
 
-git clone hsr
+Isaac Simでusdaをopenした時にtextureへのreferenceがdefaultでmaterials/textures/~.pngになっている場合があるので、 meshes/~.pngに直す必要があります
